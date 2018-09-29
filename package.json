@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "tslint 'lesson/**/*.ts'"
+    "lint": "tslint 'lesson/**/*.ts'",
+    "ts-node": "ts-node"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^10.11.3",
     "pre-commit": "^1.2.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
@@ -18,5 +20,6 @@
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "dependencies": {}
 }
