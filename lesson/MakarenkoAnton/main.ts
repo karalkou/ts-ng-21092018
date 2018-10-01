@@ -1,6 +1,8 @@
-import './is-in-array.function'; // QUESTION: is this kind of import good enough or we need more elaborate structure?
+// QUESTION: I don't know how to run this. Syntactically seems correct, but unable to execute via node
+import './is-in-array.function';
 import './summator.function';
 import './get-unique.function';
+import './to-matrix.function';
 
 // QUESTION: what is the proper way to execute this, since console.log() is not recommended?
 
@@ -21,3 +23,7 @@ const b = {};
 const c = {};
 getUnique([a, b], [b, c]); // [a, b, c]
 
+
+// toMatrix(); // nope
+// toMatrix([1, 2, 3]); // nope
+toMatrix([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], 3); // [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11]]
