@@ -1,4 +1,5 @@
-import './is-in-array.function';
+import './is-in-array.function'; // QUESTION: is this kind of import good enough or we need more elaborate structure?
+import './summator.function';
 
 // isInArray([]); // not gonna work, missing mandatory 2nd parameter
 isInArray([], 1);
