@@ -1,7 +1,6 @@
 {
   "name": "ts-ng-21092018",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,9 +13,19 @@
     "pre-commit": "^1.2.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
-    "typescript": "^3.0.3"
+    "typescript": "^3.1.1"
   },
   "pre-commit": [
     "lint"
-  ]
+  ],
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/404region/ts-ng-21092018.git"
+  },
+  "bugs": {
+    "url": "https://github.com/404region/ts-ng-21092018/issues"
+  },
+  "homepage": "https://github.com/404region/ts-ng-21092018#readme",
+  "description": ""
 }

@@ -20,11 +20,11 @@ function shipWeight(): number {
 function sendUpdates(emailAddr: string | string[]): void {
     function sendEmail(addr: string): void {
         // Default to standard delivery if empty
-        console.log(`Shipping to ${addr} via ${deliveryMethod() || 'standard'} delivery`);
+        // console.log(`Shipping to ${addr} via ${deliveryMethod() || 'standard'} delivery`);
 
         if (shipWeight() > 100) {
             // tslint:disable-next-line
-            console.log('WARNING: Oversize package');
+            //console.log('WARNING: Oversize package');
         }
     }
 
