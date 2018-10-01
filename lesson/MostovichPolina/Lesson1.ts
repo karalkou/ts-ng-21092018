@@ -1,5 +1,6 @@
 // Task_1
 type typeOfArg = number | string | boolean;
+
 function isInArray(firstArg: typeOfArg[], ...restOfArg: typeOfArg[]): boolean {
     restOfArg.filter((item): void | boolean => {
         if (firstArg.indexOf(item) === -1) {
@@ -48,9 +49,9 @@ function getUnique(...theArgs: (number | string)[]): (number | string)[] {
 console.log(getUnique('a', 1, 'a', 2, '1')); // ['a', 1, 2, '1']
 
 // Task_4
-function toMatrix(data, rowSize): typeOfArg[] {
-    const matrix: typeOfArg[] = [];
-    for (let i = 0; i < data.length; i += rowSize) {
+function toMatrix(data: (number | string)[], rowSize: number): (number | string)[] {
+    const matrix: (number | string)[] = [];
+    for (let i: number = 0; i < data.length; i += rowSize) {
         matrix.push(data.slice(i, i + rowSize));
     }
     return matrix;
