@@ -77,30 +77,25 @@ console.log(getUnique("1", 2, "n", 4, "1", 5)); //['1', 2, 'n', 4, 5]
  * элементы подмассивов беруться из массива data.
  * Оригинальный массив не должен быть изменен.
  */
-function toMatrix(data: ns[][], rowSize: number): ns[][] {
+function toMatrix(data: ns[], rowSize: number): ns[][] {
     const res: ns[][] = [];
-    data.forEach((arr: ns[]) => {
-        const tmp: ns[] = [];
-        let j: number = 0;
-        arr.forEach((el: ns) => {
-            if (j < rowSize) {
-                tmp.push(el);
-                j++;
-            }
-        });
-        res.push(tmp);
+    let tmp: ns[] = [];
+    data.forEach((el: ns) => {
+        if (tmp.length === rowSize) {
+            res.push(tmp);
+            tmp = [];
+        }
+        tmp.push(el);
     });
+
+    if (tmp.length > 0) {
+        res.push(tmp);
+    }
 
     return res;
 }
 
 // tslint:disable-next-line
-console.log(
-    toMatrix(
-        [
-            [1, 2, 3, 4, 5, 6],
-            [1, '2', 3, 4, 5],
-            [1, 2, 3],
-        ], 3
-    )
-); //[[1, 2, 3 ], [1, '2', 3 ], [1, 2, 3]]
+console.log(toMatrix([1, 2, 3, 4, 5, 6, 7, 8], 3));//[[1, 2, 3], [4, 5, 6], [7, 8]]
+// tslint:disable-next-line
+console.log(toMatrix([1, 2, "3", "t4", 5, 6, 7, 8], 3));//[[1, 2, '3'], ['t4', 5, 6], [7, 8]]
