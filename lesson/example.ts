@@ -20,6 +20,7 @@ function shipWeight(): number {
 function sendUpdates(emailAddr: string | string[]): void {
     function sendEmail(addr: string): void {
         // Default to standard delivery if empty
+        // tslint:disable-next-line
         console.log(`Shipping to ${addr} via ${deliveryMethod() || 'standard'} delivery`);
 
         if (shipWeight() > 100) {
