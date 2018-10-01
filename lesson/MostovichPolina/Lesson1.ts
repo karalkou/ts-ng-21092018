@@ -11,9 +11,9 @@ function isInArray(firstArg: typeOfArg[], ...restOfArg: typeOfArg[]): boolean {
 }
 
 // Test for task_1
-isInArray([5, 3, 7, 8, 10], 6, 8, 9, 10);
-isInArray([5, 'a', 9, 8, 10], 'a', 8, 9, 10);
-isInArray(['a', 'b', 'c', 'd', 'e'], 'a', 'b', 'c', 'd');
+isInArray([5, 3, 7, 8, 10], 6, 8, 9, 10); // false;
+isInArray([5, 'a', 9, 8, 10], 'a', 8, 9, 10); // true;
+isInArray(['a', 'b', 'c', 'd', 'e'], 'a', 'b', 'c', 'd'); // true;
 
 // Task_2
 function summator(...theArgs: (number | string)[]): number | string {
@@ -34,9 +34,9 @@ function summator(...theArgs: (number | string)[]): number | string {
 }
 // Test for task_2
 // tslint:disable-next-line
-console.log(summator(1, 1, 1, 3));
+console.log(summator(1, 1, 1, 3)); // 6;
 // tslint:disable-next-line
-console.log(summator('b', 'i', 'r', 'd'));
+console.log(summator('b', 'i', 'r', 'd')); // bird;
 
 // Task_3
 function getUnique(...theArgs: (number | string)[]): (number | string)[] {
@@ -46,7 +46,7 @@ function getUnique(...theArgs: (number | string)[]): (number | string)[] {
 }
 // Test for task_3
 // tslint:disable-next-line
-console.log(getUnique('a', 1, 'a', 2, '1')); // ['a', 1, 2, '1']
+console.log(getUnique('a', 1, 'a', 2, '1')); // ['a', 1, 2, '1'];
 
 // Task_4
 function toMatrix(data: (number | string)[], rowSize: number): (number | string)[] {
@@ -58,4 +58,4 @@ function toMatrix(data: (number | string)[], rowSize: number): (number | string)
 }
 // Test for task_4
 // tslint:disable-next-line
-console.log(toMatrix([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+console.log(toMatrix([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)); // [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
