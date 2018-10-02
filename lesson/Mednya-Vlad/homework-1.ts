@@ -4,10 +4,10 @@
  * @param other Остальные аргументы, которые проверяем.
  */
 function isInArray<T>(source: T[], ...other: T[]): boolean {
-    let isInArray = other.every(value =>
+    const hasInArray = other.every(value =>
         source.indexOf(value) !== -1);
 
-    return isInArray;
+    return hasInArray;
 }
 
 function checkIsInArray(): void {
@@ -19,8 +19,8 @@ function checkIsInArray(): void {
     console.log('Source: ', source);
     console.log('Other 1: ', other1);
     console.log('Other 2: ', other2);
-    console.log('Проверяем other 1: ', isInArray(source, ...other1))
-    console.log('Проверяем other 2: ', isInArray(source, ...other2))
+    console.log('Проверяем other 1: ', isInArray(source, ...other1));
+    console.log('Проверяем other 2: ', isInArray(source, ...other2));
     console.log('');
 }
 
@@ -37,7 +37,7 @@ function summator(...array: string[]): string;
  * @param array Массив чисел.
  */
 function summator(...array: number[]): number;
-function summator(...array: Array<StringOrNumber>): StringOrNumber {
+function summator(...array: StringOrNumber[]): StringOrNumber {
     const initialValue = typeof array[0] === 'string' ? '' : 0;
     const result = array.reduce(function(sum, currentValue): StringOrNumber {
         return add(sum, currentValue);
@@ -54,7 +54,7 @@ function add(a: StringOrNumber, b: StringOrNumber): StringOrNumber {
     }
 }
 
-function checkSummator() : void {
+function checkSummator(): void {
     const numberArgs = [1, 5, 10, 2, 4];
     const stringArgs = ['Привет', ' ', 'всем в этом ', 'чатике!'];
 
@@ -72,7 +72,7 @@ function checkSummator() : void {
  * @param array Массив значений.
  */
 function getUnique<T>(...array: T[]): T[] {
-    let newArray: T[] = [];
+    const newArray: T[] = [];
 
     for (let i = 0; i < array.length; i++) {
         if (newArray.indexOf(array[i]) === -1) {
@@ -110,7 +110,7 @@ function checkGetUnique(): void {
  ```
  */
 function toMatrix<T>(data: T[], rowSize: number): T[][] {
-    let matrixOutput: T[][] = [];
+    const matrixOutput: T[][] = [];
     const rowNumber: number = Math.ceil(data.length / rowSize);
 
     for (let i = 0; i < data.length; i += rowSize) {
