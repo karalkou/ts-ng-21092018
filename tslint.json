@@ -40,7 +40,7 @@
     "prefer-const": true,
     "array-type": [
       true,
-      "array"
+      "array-simple"
     ],
     "no-conditional-assignment": true,
     "curly": true,
@@ -195,7 +195,7 @@
     "prefer-const": true,
     "array-type": [
       true,
-      "array"
+      "array-simple"
     ],
     "no-conditional-assignment": true,
     "curly": true,
