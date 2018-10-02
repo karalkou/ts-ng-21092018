@@ -26,7 +26,7 @@ console.log(isInArray([1, 2, 3], 1, 2, 3, 4, 5)); //false
  * Написать функцию summator(), которая суммирует переданые ей аргументы.
  * Аргументы могут быть либо строкового либо числового типа. Количество их не ограничено
  */
-function summator(...args: Array<number | string>): number {
+function summator(...args: (number | string)[]): number {
     let res: number = 0;
 
     args.forEach((arg: number | string) => {

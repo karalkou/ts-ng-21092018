@@ -1,8 +1,8 @@
-function toMatrix(data: any[], rowSize: number) {
+function toMatrix<T>(data: T[], rowSize: number): T[][] {
     const result = [];
     const l = data.length;
 
-    let chunk: any[] = [];
+    let chunk: T[] = [];
     for (let i = 0; i < l; i++) {
         for (let j = i; j < i + rowSize && j < l; j++) {
             if (j === i) {
@@ -16,3 +16,5 @@ function toMatrix(data: any[], rowSize: number) {
 
     return result;
 }
+
+toMatrix<number>([1, 2, 3], 3);

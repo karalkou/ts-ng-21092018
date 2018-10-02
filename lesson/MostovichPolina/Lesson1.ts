@@ -32,6 +32,7 @@ function summator(...theArgs: (number | string)[]): number | string {
     }
     return result;
 }
+
 // Test for task_2
 // tslint:disable-next-line
 console.log(summator(1, 1, 1, 3)); // 6;
@@ -44,18 +45,22 @@ function getUnique(...theArgs: (number | string)[]): (number | string)[] {
     const uniqueArr: (number | string)[] = theArgs.filter((value, index, arr) => arr.indexOf(value) === index);
     return uniqueArr;
 }
+
 // Test for task_3
 // tslint:disable-next-line
 console.log(getUnique('a', 1, 'a', 2, '1')); // ['a', 1, 2, '1'];
 
+type SNArr = (number | string)[];
+
 // Task_4
-function toMatrix(data: (number | string)[], rowSize: number): (number | string)[] {
-    const matrix: (number | string)[] = [];
+function toMatrix(data: SNArr, rowSize: number): SNArr[] {
+    const matrix: SNArr[] = [];
     for (let i: number = 0; i < data.length; i += rowSize) {
         matrix.push(data.slice(i, i + rowSize));
     }
     return matrix;
 }
+
 // Test for task_4
 // tslint:disable-next-line
 console.log(toMatrix([1, 2, 3, 4, 5, 6, 7, 8, 9], 3)); // [[1, 2, 3], [4, 5, 6], [7, 8, 9]];

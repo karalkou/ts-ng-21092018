@@ -21,7 +21,7 @@
     ],
     "max-classes-per-file": [
       true,
-      1
+      2
     ],
     "max-file-line-count": [
       true,
@@ -176,7 +176,7 @@
     ],
     "max-classes-per-file": [
       true,
-      1
+      2
     ],
     "max-file-line-count": [
       true,
@@ -194,7 +194,7 @@
     "prefer-const": true,
     "array-type": [
       true,
-      "array-simple"
+      "array"
     ],
     "no-conditional-assignment": true,
     "curly": true,
