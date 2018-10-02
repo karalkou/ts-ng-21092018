@@ -25,7 +25,7 @@ function sendUpdates(emailAddr: string | string[]): void {
 
         if (shipWeight() > 100) {
             // tslint:disable-next-line
-            console.log('WARNING: Oversize package');
+            //console.log('WARNING: Oversize package');
         }
     }
 
