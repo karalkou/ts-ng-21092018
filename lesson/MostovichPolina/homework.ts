@@ -1,5 +1,6 @@
 // Task_1
 type typeOfArg = number | string | boolean;
+type SNArr = (number | string)[];
 
 function isInArray(firstArg: typeOfArg[], ...restOfArg: typeOfArg[]): boolean {
     restOfArg.filter((item): void | boolean => {
@@ -16,7 +17,7 @@ isInArray([5, 'a', 9, 8, 10], 'a', 8, 9, 10); // true;
 isInArray(['a', 'b', 'c', 'd', 'e'], 'a', 'b', 'c', 'd'); // true;
 
 // Task_2
-function summator(...theArgs: (number | string)[]): number | string {
+function summator(...theArgs: SNArr): number | string {
     let result: number | string = 0 || '';
     if (typeof theArgs[0] === 'string') {
         result = '';
@@ -40,17 +41,15 @@ console.log(summator(1, 1, 1, 3)); // 6;
 console.log(summator('b', 'i', 'r', 'd')); // bird;
 
 // Task_3
-function getUnique(...theArgs: (number | string)[]): (number | string)[] {
+function getUnique(...theArgs: SNArr): SNArr {
     // for es6 const uniqueArr: (number | string)[] = [...new Set(theArgs)];
-    const uniqueArr: (number | string)[] = theArgs.filter((value, index, arr) => arr.indexOf(value) === index);
+    const uniqueArr: SNArr = theArgs.filter((value, index, arr) => arr.indexOf(value) === index);
     return uniqueArr;
 }
 
 // Test for task_3
 // tslint:disable-next-line
 console.log(getUnique('a', 1, 'a', 2, '1')); // ['a', 1, 2, '1'];
-
-type SNArr = (number | string)[];
 
 // Task_4
 function toMatrix(data: SNArr, rowSize: number): SNArr[] {
