@@ -1,3 +1,4 @@
+
 // Task_1
 type typeOfArg = number | string | boolean;
 type SNArr = (number | string)[];
@@ -42,7 +43,7 @@ console.log(summator('b', 'i', 'r', 'd')); // bird;
 
 // Task_3
 function getUnique(...theArgs: SNArr): SNArr {
-    // for es6 const uniqueArr: (number | string)[] = [...new Set(theArgs)];
+// for es6 const uniqueArr: (number | string)[] = [...new Set(theArgs)];
     const uniqueArr: SNArr = theArgs.filter((value, index, arr) => arr.indexOf(value) === index);
     return uniqueArr;
 }
