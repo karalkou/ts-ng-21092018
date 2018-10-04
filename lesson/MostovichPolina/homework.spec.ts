@@ -12,10 +12,17 @@ describe('test functions ', () => {
 });
 
 describe('test functions ', () => {
+    let expected = 0;
+    beforeEach(() => {
+        expected = 6;
+    });
+    afterEach(() => {
+        expected = 0;
+    });
     it('summator should return 6', () => {
         const result = summator(1, 2, 3);
         expect(result)
-            .toEqual(6);
+            .toEqual(expected);
     });
 });
 
