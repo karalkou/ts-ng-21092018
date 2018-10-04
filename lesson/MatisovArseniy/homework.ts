@@ -19,9 +19,17 @@ function summator(...args: StringOrNumber[]): StringOrNumber {
 }
 
 function getUnique<T>(...args: T[]): T[] {
-    const uniqArgs: Set<T> = new Set(args);
+    const uniqArgs = new Set(args);
 
     return [...uniqArgs];
 }
 
-// console.log(getUnique('asdf', 'asdf', 'a', 'b', 'a'));
+function toMatrix<T>(data: T[], rowSize: number): T[][] {
+    const result: T[][] = [];
+
+    for (let i = 0; i < Math.ceil(data.length / rowSize); i++) {
+        result.push(data.slice(i * rowSize, rowSize * (i + 1)));
+    }
+
+    return result;
+}
