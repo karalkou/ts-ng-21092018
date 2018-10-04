@@ -8,7 +8,7 @@ module.exports = (config) => {
       "**/*.ts": ["karma-typescript"]
     },
     reporters: ["progress", "karma-typescript"],
-    browsers: ["Chrome"],
+    browsers: ["ChromeHeadless"],
     singleRun: "true",
     logLevel: config.LOG_DEBUG,
     karmaTypescriptConfig: {
