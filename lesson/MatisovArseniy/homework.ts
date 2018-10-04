@@ -1,4 +1,4 @@
-function isInArray<T>(mainArray: T[], ...args: T[]): boolean {
+export function isInArray<T>(mainArray: T[], ...args: T[]): boolean {
     return args.every((item) => mainArray.indexOf(item) !== -1);
 }
 
@@ -12,19 +12,19 @@ function sum(a: StringOrNumber, b: StringOrNumber): StringOrNumber {
     }
 }
 
-function summator(...args: StringOrNumber[]): StringOrNumber {
+export function summator(...args: StringOrNumber[]): StringOrNumber {
     const initVal = typeof args[0] === 'string' ? '' : 0;
 
     return args.reduce((result, currentValue) => sum(result, currentValue), initVal);
 }
 
-function getUnique<T>(...args: T[]): T[] {
+export function getUnique<T>(...args: T[]): T[] {
     const uniqArgs = new Set(args);
 
     return [...uniqArgs];
 }
 
-function toMatrix<T>(data: T[], rowSize: number): T[][] {
+export function toMatrix<T>(data: T[], rowSize: number): T[][] {
     const result: T[][] = [];
 
     for (let i = 0; i < Math.ceil(data.length / rowSize); i++) {
