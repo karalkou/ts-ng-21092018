@@ -3,6 +3,7 @@ import { summator } from './homework';
 import { getUnique } from './homework';
 import { toMatrix } from './homework';
 
+
 describe('test functions ', () => {
     it('isInArray should work', () => {
         const result = isInArray([1, 4, 5], 1, 4, 5);
