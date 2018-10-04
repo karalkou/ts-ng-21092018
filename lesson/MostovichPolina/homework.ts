@@ -1,9 +1,8 @@
-
 // Task_1
 type typeOfArg = number | string | boolean;
 type SNArr = (number | string)[];
 
-function isInArray(firstArg: typeOfArg[], ...restOfArg: typeOfArg[]): boolean {
+export function isInArray(firstArg: typeOfArg[], ...restOfArg: typeOfArg[]): boolean {
     restOfArg.filter((item): void | boolean => {
         if (firstArg.indexOf(item) === -1) {
             return false;
@@ -18,7 +17,7 @@ isInArray([5, 'a', 9, 8, 10], 'a', 8, 9, 10); // true;
 isInArray(['a', 'b', 'c', 'd', 'e'], 'a', 'b', 'c', 'd'); // true;
 
 // Task_2
-function summator(...theArgs: SNArr): number | string {
+export function summator(...theArgs: SNArr): number | string {
     let result: number | string = 0 || '';
     if (typeof theArgs[0] === 'string') {
         result = '';
@@ -42,7 +41,7 @@ console.log(summator(1, 1, 1, 3)); // 6;
 console.log(summator('b', 'i', 'r', 'd')); // bird;
 
 // Task_3
-function getUnique(...theArgs: SNArr): SNArr {
+export function getUnique(...theArgs: SNArr): SNArr {
 // for es6 const uniqueArr: (number | string)[] = [...new Set(theArgs)];
     const uniqueArr: SNArr = theArgs.filter((value, index, arr) => arr.indexOf(value) === index);
     return uniqueArr;
@@ -53,7 +52,7 @@ function getUnique(...theArgs: SNArr): SNArr {
 console.log(getUnique('a', 1, 'a', 2, '1')); // ['a', 1, 2, '1'];
 
 // Task_4
-function toMatrix(data: SNArr, rowSize: number): SNArr[] {
+export function toMatrix(data: SNArr, rowSize: number): SNArr[] {
     const matrix: SNArr[] = [];
     for (let i: number = 0; i < data.length; i += rowSize) {
         matrix.push(data.slice(i, i + rowSize));
