@@ -1,8 +1,7 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "strict": false,
         "lib": ["es6"]
     },
-    "include": ["./maint.ts"]
+    "include": ["homework.ts"]
 }

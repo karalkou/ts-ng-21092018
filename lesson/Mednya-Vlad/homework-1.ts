@@ -38,8 +38,10 @@ function summator(...array: string[]): string;
  */
 function summator(...array: number[]): number;
 function summator(...array: StringOrNumber[]): StringOrNumber {
-    const initialValue = typeof array[0] === 'string' ? '' : 0;
-    const result = array.reduce(function(sum, currentValue): StringOrNumber {
+    const initialValue = typeof array[0] === 'string'
+        ? ''
+        : 0;
+    const result = array.reduce(function (sum, currentValue): StringOrNumber {
         return add(sum, currentValue);
     }, initialValue);
 
@@ -98,15 +100,15 @@ function checkGetUnique(): void {
  * @param rowSize Размер строки - количество элементов в подмассивах.
  * @example
  * ```typescript
-    const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const rowSize1 = 5;
-    const rowSize2 = 3;
+ const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ const rowSize1 = 5;
+ const rowSize2 = 3;
 
-    toMatrix(data, rowSize1);
-    // => [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
+ toMatrix(data, rowSize1);
+ // => [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
 
-    toMatrix(data, rowSize2);
-    // => [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
+ toMatrix(data, rowSize2);
+ // => [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10]]
  ```
  */
 function toMatrix<T>(data: T[], rowSize: number): T[][] {
