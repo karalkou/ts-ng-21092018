@@ -3,5 +3,5 @@
     "compilerOptions": {
         "lib": ["es6"]
     },
-    "include": ["homework.ts"]
+    "include": ["./homework.ts", "./homework.spec.ts"]
 }
