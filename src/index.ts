@@ -70,20 +70,22 @@
 //     // controlSeauence$$.complete();
 // }, 4000);
 
-//TODO windowTime, multicast
+// TODO windowTime, multicast
 
 import { from } from 'rxjs';
 import { map, observeOn } from 'rxjs/operators';
 import { async } from 'rxjs/internal/scheduler/async';
 import { asap } from 'rxjs/internal/scheduler/asap';
 
-let arr = [];
+const arr = [];
 for (let i = 0; i < 5000; i++) {
     arr.push(i);
 }
 const sequence$ = from(arr);
 
+// tslint:disable-next-line
 console.log('start');
+// tslint:disable-next-line
 console.time('example');
 sequence$.pipe(
     observeOn(asap),
@@ -92,6 +94,8 @@ sequence$.pipe(
     .subscribe((_x) => {
 
     }, () => {}, () => {
+        // tslint:disable-next-line
         console.timeEnd('example');
     });
+// tslint:disable-next-line
 console.log('end');
